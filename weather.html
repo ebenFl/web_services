@@ -102,7 +102,8 @@
         document.getElementById('heading').innerHTML += " - " + data.location.name.toString();
         document.getElementById('local_time').innerHTML = data.location.localtime;
         document.getElementById('temp_today').innerHTML = getFarenheitTemp(data.current.temperature) + " F";
-        document.getElementById('thermometer_inner').style["height"] = getFarenheitTemp(data.current.temperature);
+        document.getElementById('thermometer_inner').style.height = getFarenheitTemp(data.current.temperature).toString() + '%';
+        console.log(document.getElementById('thermometer_inner').style);
         document.getElementById("precip_today").innerHTML = data.current.precip + 'mm';
         document.getElementById("humidity_today").innerHTML = data.current.humidity + '%';
         document.getElementById("wind_today").innerHTML = data.current.wind_speed + ' km/hr';
